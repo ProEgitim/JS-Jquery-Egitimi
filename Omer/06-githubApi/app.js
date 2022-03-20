@@ -23,7 +23,6 @@ function formSearch(e) {
       if (response.user.message === "Not Found") {
         ui.displayMessage("Kullanıcı bulunmadı", "danger");
       } else {
-        console.log(response.user);
         ui.appendRepos(response.repo);
         ui.appendUser(response.user);
         ui.appendSearch(userName);
