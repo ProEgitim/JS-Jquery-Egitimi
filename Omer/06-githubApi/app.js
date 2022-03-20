@@ -23,10 +23,12 @@ function formSearch(e) {
       if (response.user.message === "Not Found") {
         ui.displayMessage("Kullanıcı bulunmadı", "danger");
       } else {
+        
         ui.appendRepos(response.repo);
         ui.appendUser(response.user);
         ui.appendSearch(userName);
         Storage.addSearchUsersToStorage(userName);
+        
       }
     })
     .catch(err=> ui.displayMessage(err,"danger"));
